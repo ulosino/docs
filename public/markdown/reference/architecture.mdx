@@ -20,7 +20,7 @@ This document is an overview of the ULOSINO architecture.
 - The `.mdx` file extension is used for MDX files. MDX is a file format that is written in Markdown but includes the ability for React components to be included. All Database Content is written in MDX.
 - The `.md` file extension is used for traditional Markdown files. This includes ULOSINO documentation and our README file.
 
-> There are no `.jsx` files. All React component files use TypeScript.
+> **Note:** There are no `.jsx` files. All React component files use TypeScript.
 
 ---
 
@@ -48,7 +48,7 @@ Let's follow the journey of the Alpine Linux page:
 4. Next.js builds this page. At this stage it transcompiles from TypeScript into JavaScript (specifically to the EsmaScript 2021 standard), and then HTML and JSON.
 5. This is repeated for all MDX pages in `/public/markdown/browse`.
 
-> When working in development mode, step 5 isn't applicable, as pages aren"t being prerendered and we are using just-in-time compilation.
+> **Note:** When working in development mode, step 5 isn't applicable, as pages aren"t being prerendered and we are using just-in-time compilation.
 
 ---
 
@@ -61,7 +61,7 @@ Let's follow the journey of the Alpine Linux page:
 - `/cypress` stores Cypress integration tests
 - `/.github` stores CI workflows and configuration files for GitHub
 
-> The automatically generated `node_modules` and `.next` folders are excluded by our `.gitignore`.
+> **Note:** The automatically generated `node_modules` and `.next` folders are excluded by our `.gitignore`.
 
 ---
 
@@ -111,7 +111,7 @@ On Suspense, we want to adopt Suspense in a lot of places. Suspense is built on 
 
 Being able to handle errors and exceptions is critical for the reliability and integrity of the app.
 
-> ULOSINO includes a few custom error codes. Read the ErrorCodes document for a list.
+> **Tip:** ULOSINO includes a few custom error codes. Read through the [Error Reference](/docs/reference/errors) for more details.
 
 ### React Error Boundaries
 
@@ -137,7 +137,9 @@ These are the primary providers:
 
 ### ApplicationProvider
 
-This is the grand provider. It wraps around every page. `ApplicationProvider` provides `ChakraProvider`, keyboard shortcut handling, error handling, troubleshooting, and other functions (this is because multiple technical limitations attempting to use these functions in `.app_tsx`).
+This is the grand provider. It wraps around every page. `ApplicationProvider` provides `ChakraProvider`, keyboard shortcut handling, error handling, troubleshooting, and other functions.
+
+> **Note:** Multiple technical limitations arise when attempting to use `ApplicationProvider` features in `.app_tsx`.
 
 ### OSPageProvider
 

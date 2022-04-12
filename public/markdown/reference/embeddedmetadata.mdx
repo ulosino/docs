@@ -1,0 +1,38 @@
+---
+name: "Embedded Metadata Definitions"
+summary: "About embedded metadata in Operating System Pages."
+date: "2021-04-12"
+---
+
+# Embedded Metadata Definitions
+
+This reference document explains how to use embedded metadata in ULOSINO markdown files.
+
+---
+
+## Example
+
+All ULOSINO markdown files include embedded metadata stored in a key-value pair. This technically called YAML. In a .mdx file, embedded metadata looks like this:
+
+```
+---
+key: "value"
+
+# Other fields...
+---
+
+Hello world...
+
+```
+
+The `---` lines encapsulate the metadata. The last one separates the metadata from the rest of the file.
+
+---
+
+## Recognised Embedded Metadata
+
+> **Note:** `name`, `summary`, `date`, `platform` and `version` are required for sorting. All other metadata fields will be hidden if they have no value.
+
+> **Warning:** `donate`, `donateGithub`, `donateLiberapay`, and `donateOpenCollective` must be included in the file. If donation features aren't used for that page, the field needs to be commented out, not just left out.
+
+<EmbeddedMetadataTable />

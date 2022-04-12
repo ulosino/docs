@@ -16,15 +16,15 @@ export default function Document() {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_GB" />
 
-        {/* Verification tags */}
-        <meta name="saashub-verification" content="t23yhfcmm06a" />
-
         {/* PWA configuration and icon import */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#001e38" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="ULOSINO" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="ULOSINO Documentation"
+        />
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="icon" href="/brand/favicon.ico" />
         <link rel="apple-touch-icon" href="/brand/apple-icon-180.png" />

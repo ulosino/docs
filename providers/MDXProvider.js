@@ -9,7 +9,7 @@
 import { MDXProvider } from "@mdx-js/react";
 
 // Chakra UI, icons, and other design imports
-import { Heading, Text, Divider } from "@chakra-ui/react";
+import { Heading, Text, Divider, Code } from "@chakra-ui/react";
 
 const componentOverrides = {
   h1: (props) => <Heading size="xl" mb={5} {...props} />,
@@ -17,6 +17,7 @@ const componentOverrides = {
   h3: (props) => <Text textStyle="miniHeading" as="h6" {...props} />,
   p: (props) => <Text {...props} my={2} />,
   hr: (props) => <Divider {...props} my={5} />,
+  code: (props) => <Code {...props} textTransform="initial" px={2} />,
 };
 
 export default function MDXProviderComponent({ children }) {

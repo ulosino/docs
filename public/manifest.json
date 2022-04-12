@@ -1,7 +1,7 @@
 {
-  "short_name": "ULOSINO",
-  "name": "ULOSINO",
-  "description": "Open Source Operating System Information",
+  "short_name": "ULOSINO Documentation",
+  "name": "ULOSINO Docs",
+  "description": "Documentation resources and guides for ULOSINO",
   "id": "/",
   "start_url": "/",
   "scope": "/",
@@ -37,7 +37,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://www.ulosino.com/manifest.json"
+      "url": "https://docs.ulosino.com/manifest.json"
     }
   ]
 }

@@ -11,6 +11,7 @@ import Head from "next/head";
 // First party components
 import ApplicationProvider from "providers/ApplicationProvider";
 import Layout from "components/layouts/Layout";
+import EmbeddedMetadataTable from "components/EmbeddedMetadataTable";
 
 // Markdown processing libraries
 import fs from "fs";
@@ -49,7 +50,10 @@ export default function ReferenceDocumentationPage({
       </Head>
 
       <MDXProvider>
-        <MDXRemote {...source} components={componentOverrides} />
+        <MDXRemote
+          {...source}
+          components={{ componentOverrides, EmbeddedMetadataTable }}
+        />
       </MDXProvider>
     </>
   );
