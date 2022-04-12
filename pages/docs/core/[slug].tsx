@@ -83,7 +83,7 @@ export const getStaticProps: GetStaticProps<{
   mdxSource: MDXRemoteSerializeResult;
 }> = async ({ params }: PathProps) => {
   // Find Markdown files
-  const filePath = path.join(`public/markdown/Core`, `${params.slug}.mdx`);
+  const filePath = path.join(`public/markdown/core`, `${params.slug}.mdx`);
   const source = fs.readFileSync(filePath);
 
   // Use the files to parse MDX
@@ -101,7 +101,7 @@ export const getStaticProps: GetStaticProps<{
 
 // Find MDX files in the /public/markdown/ folder to generate paths
 export const getStaticPaths = async () => {
-  const pageContentPath = path.join(process.cwd(), "public/markdown/Core");
+  const pageContentPath = path.join(process.cwd(), "public/markdown/core");
   const pageFilePaths = fs
     .readdirSync(pageContentPath)
     .filter((path) => /\.mdx?$/.test(path));
