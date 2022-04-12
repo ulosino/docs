@@ -301,12 +301,12 @@ export default function Layout({ children }: LayoutProps) {
                 </Center>
               )}
             </Suspense>
-            <Link href="/about/license" passHref>
-              <Button variant="ghost" size="sm" as="a" id="testingLicenseLink">
+            <Link href="https://www.ulosino.com/about/license" passHref>
+              <Button variant="ghost" size="sm" as="a">
                 License
               </Button>
             </Link>
-            <Link href="/about/privacy" passHref>
+            <Link href="https://www.ulosino.com/about/privacy" passHref>
               <Button variant="ghost" size="sm" as="a">
                 Privacy
               </Button>
