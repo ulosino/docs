@@ -1,0 +1,75 @@
+---
+name: "Preferences Reference"
+summary: "Technical information about preferences."
+date: "2021-04-12"
+---
+
+# Preferences Reference
+
+This document offers a technical reference for [Preferences](/docs/preferences).
+
+Beginning with version `3.2.0`, preferences are stored in `LocalStorage` to enable state persistence. The preference store can be accessed using the browser's developer tools, usually under "Storage" and then "LocalStorage". This area can also be used to change preference values manually.
+
+> **Note:** The default for all standard preferences is `false`.
+
+> **Note:** For boolean keys, any value other than `true` is equal to the key not being present.
+
+---
+
+## Appearance Preferences
+
+These preferences change how ULOSINO looks.
+
+### Use Advanced Search Link
+
+This changes the Browse link on the navigation bar to go to Advanced Search instead.
+
+It is stored in `LocalStorage` using the `P3PrefAdvancedSearchLink` key and expects a boolean value.
+
+### Show Back Button for Large Windows
+
+This shows a back button on the navigation bar for large windows.
+
+It is stored in `LocalStorage` using the `P3PrefBackButtonLargeWindows` key and expects a boolean value.
+
+### Invert Colours for this Session
+
+This sets the current tab to use the colour mode that is the opposite of the operating system setting. If the operating system doesn't support colour modes, this will toggle the default light mode to dark mode and vice versa.
+
+However, this preference doesn't operate like the others. For example, changing it from within the browser's developer tools has no effect. **It is not recommended to rely on this preference to handle persistent values.** It is stored in `LocalStorage` using the `chakra-ui-color-mode` key and expects either `light` or `dark`.
+
+---
+
+## Notification Preferences
+
+Notification preferences change how ULOSINO notifies you and how verbose the app is.
+
+### Minimise In-App Notifications
+
+This minimises all non-critical notifications and banners.
+
+It is stored in `LocalStorage` using the `P3PrefMinimiseNotifications` key and expects a boolean value.
+
+### Minimise Confirmations
+
+This minimises prompts for the confirmation of some actions.
+
+**This has not been implemented yet and the preference is in planning.** It will be stored in `LocalStorage` using the `P3PrefMinimiseConfirmations` key and expects a boolean value.
+
+---
+
+## Advanced Preferences
+
+Advanced preferences change advanced application settings and behaviours.
+
+### Disable Tempo Features
+
+This disables all donation features. For example, attempting to visit a `/marketplace` URL with this preference enabled will return an error.
+
+It is stored in `LocalStorage` using the `P3PrefDisableDonationFeatures` key and expects a boolean value.
+
+### Disable Background Update Services
+
+This disables automatic checking for background updates and prompts to install them offline.
+
+**This has not been fully implemented yet and therefore has no effect.** It is stored in `LocalStorage` using the `P3PrefDisableBackgroundUpdates` key and expects a boolean value.

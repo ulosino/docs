@@ -1,0 +1,43 @@
+---
+name: "Error Reference"
+summary: "About error codes."
+date: "2021-04-12"
+---
+
+# Error Reference
+
+Refer to this document for an overview of error codes and their meanings.
+
+---
+
+## Integrated Application Errors (IAEs)
+
+ULOSINO handles application errors using Integrated Application Errors. More details may be available in the browser console.
+
+### `BrowserNotPermitted`
+
+The browser that is being used to access ULOSINO isn't supported. Try using a different browser.
+
+### `FeatureIsDisabled`
+
+The feature has been manually disabled by the user (non-default behaviour). Try [restoring the default preferences](/docs/preferences/restore).
+
+### `ErrorRegionCaught`
+
+An error was found in a region of the page which was covered by a fallback (`<ErrorFallback>`).
+
+### `ErrorInUndefinedRegion`
+
+An error was found in a region of the page which was not covered by a fallback.
+
+Because there is no region-scope fallback, the renderer renders an application-scope fallback (`<ErrorFallbackApplication>`), which crashes the application.
+
+To return to ULOSINO, refresh the page.
+
+---
+
+## Request Errors
+
+We've built custom fallbacks for the common HTTP 404 ("Page Not Found") and HTTP 500 ("Internal Server Error") errors.
+
+We've also built a custom fallback when the browser is offline.

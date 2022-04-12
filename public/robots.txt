@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docs.ulosino.com
+
+# Sitemaps
+Sitemap: https://docs.ulosino.com/sitemap.xml
