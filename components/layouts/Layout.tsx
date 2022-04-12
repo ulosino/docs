@@ -49,7 +49,7 @@ interface LayoutProps {
 }
 
 // Begin wrapping component
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, showPreferences }: LayoutProps) {
   // Global preferences
   const [backButton] = useLocalStorage("P3PrefBackButtonLargeWindows");
   const [dangerousRuntime] = useLocalStorage("P3PrefDangerousRuntime");
@@ -274,6 +274,26 @@ export default function Layout({ children }: LayoutProps) {
                 </Button>
               </Link>
             </Center>
+            {showPreferences ? (
+              <>
+                {/* These are shown on the Options page only */}
+                <Button
+                  size="sm"
+                  onClick={(_) =>
+                    writeStorage(
+                      "P3PrefBackButtonLargeWindows",
+                      backButton ? false : true
+                    )
+                  }
+                  display={{ base: "none", md: "inline-block" }}
+                  id="testingFooterBackButtonDesktopSwitch"
+                >
+                  {backButton ? "Hide" : "Show"} Back
+                </Button>
+              </>
+            ) : (
+              ""
+            )}
           </Stack>
           <Spacer />
           <Stack direction="row" spacing={2} id="testingLegalLinks">
