@@ -48,7 +48,7 @@ Let's follow the journey of the Alpine Linux page:
 4. Next.js builds this page. At this stage it transcompiles from TypeScript into JavaScript (specifically to the EsmaScript 2021 standard), and then HTML and JSON.
 5. This is repeated for all MDX pages in `/public/markdown/browse`.
 
-> **Note:** When working in development mode, step 5 isn't applicable, as pages aren"t being prerendered and we are using just-in-time compilation.
+> **Note:** When working in development mode, step 5 isn't applicable, as pages aren't being prerendered and we are using just-in-time compilation.
 
 ---
 
@@ -99,11 +99,13 @@ This powers Preferences, background updates, and other features.
 
 ---
 
-## Performance Optimisation with Dynamic Imports and Suspense
+## Performance Optimisation with Streaming and Edge Runtime
 
-We use the Next.js dynamic import feature to cut down on the amount of code we ship to the user at once. Next.js' custom implementation of dynamic loading will be superseded by React Suspense upon the general availability of React 18.
+ULOSINO extensively takes advantage of the `<Suspense>` component introduced in React 18. It allows us to load everything within a "Suspense boundary" _after_ the page itself has loaded. This is particularly useful for our Search functions, which exceed `100kb` in size. The fallback is a loading spinner or a "Communicating with Server" `<Text>`.
 
-On Suspense, we want to adopt Suspense in a lot of places. Suspense is built on SSR Streaming (using HTTP) and therefore the performance benefits would be significant. We've also made choices over component design so that we can wrap components in `<Suspense>`, and even upgrade these components to React Server Components upon the general availability of that feature.
+We're also moving some of our code over to the Edge using Edge Runtime. This is fully-streaming based, using modern, clean, web APIs. This is powered by Edge Functions on Vercel.
+
+Performance is a real focus at ULOSINO and we're continuing to investigate new solutions and approaches.
 
 ---
 
