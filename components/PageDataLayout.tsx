@@ -11,7 +11,7 @@ interface MetadataTypes {
 }
 
 // Begin component
-export default function OSDataLayout({
+export default function PageDataLayout({
   name,
   summary,
   OSCardId,

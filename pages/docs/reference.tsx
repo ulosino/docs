@@ -32,7 +32,7 @@ import BrowseLayout from "components/layouts/BrowseLayout";
 
 // Markdown processing libraries
 import { getReferenceDocs } from "providers/DocsPageProvider";
-import OSDataLayout from "components/OSDataLayout";
+import PageDataLayout from "components/PageDataLayout";
 
 interface PageDataProps {
   ReferenceDocsData: any;
@@ -79,7 +79,7 @@ export default function ReferenceDocumentationList({
               passHref
             >
               <Card variant="button" as="a">
-                <OSDataLayout
+                <PageDataLayout
                   name={name}
                   summary={summary}
                   OSCardId="testingOSDataCard"

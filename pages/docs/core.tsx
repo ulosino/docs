@@ -32,7 +32,7 @@ import BrowseLayout from "components/layouts/BrowseLayout";
 
 // Markdown processing libraries
 import { getDocs } from "providers/DocsPageProvider";
-import OSDataLayout from "components/OSDataLayout";
+import PageDataLayout from "components/PageDataLayout";
 
 interface PageDataProps {
   CoreDocsData: any;
@@ -80,7 +80,7 @@ export default function CoreDocumentationList({ CoreDocsData }: PageDataProps) {
               passHref
             >
               <Card variant="button" as="a">
-                <OSDataLayout
+                <PageDataLayout
                   name={name}
                   summary={summary}
                   OSCardId="testingOSDataCard"
