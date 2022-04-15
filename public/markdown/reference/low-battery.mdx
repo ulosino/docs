@@ -1,0 +1,44 @@
+---
+name: "Low Battery Performance Restrictions"
+summary: "About automatic performance restrictions introduced to reduce resource usage."
+date: "2021-04-12"
+---
+
+# Low Battery Performance Restrictions
+
+ULOSINO attempts to reduce it's resource usage by turning off certain features when your device's battery is critically low.
+
+---
+
+## Disable Performance Restrictions
+
+To turn off performance restrictions:
+
+- Connect your device to the charger
+- Continue charging until your device reaches 7% battery level.
+
+> **Tip:** It is recommended you wait until 10% before using the disabled features, which are described below.
+
+---
+
+## Features Disabled Under Performance Restrictions
+
+Some ULOSINO features can be intensive on system resources, and therefore further decrease your device's battery life.
+
+These features are disabled when the battery is critically low:
+
+- Advanced Search
+- Reset Preferences
+- Transfer Preferences
+- Some background services
+
+In addition, some presentation elements like animations and transitions are also disabled.
+
+---
+
+## Supported Browsers
+
+Some web browsers do not support the [Battery Status API](https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API). As a precautionary measure, and to prevent [application errors](/docs/reference/errors), performance restrictions are not introduced on these browsers:
+
+- Safari (Mac)
+- All iOS and iPadOS browsers, including Safari (all browsers on iOS must use WebKit technology)
