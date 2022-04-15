@@ -22,6 +22,16 @@ The browser that is being used to access ULOSINO isn't supported. Try using a di
 
 The feature has been manually disabled by the user (non-default behaviour). Try [restoring the default preferences](/docs/preferences/restore).
 
+### `FeatureIsBlocked`
+
+The app has blocked usage of the feature. Often this is because of [low battery performance restrictions](/docs/reference/limited-performance). Try [restoring the default preferences](/docs/preferences/restore).
+
+## `ShareErrorCaught`
+
+The share functionality encountered an error. This error is handled by the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) and is accompanied with a detailed error code from that API.
+
+> **Note:** This error is only shown in the console.
+
 ### `ErrorRegionCaught`
 
 An error was found in a region of the page which was covered by a fallback (`<ErrorFallback>`).
